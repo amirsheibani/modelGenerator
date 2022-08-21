@@ -19,7 +19,7 @@
         <entry key="annotations">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../annotations/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/git/modelGeneratorsAnnotation-663476d8f30242b04773217f0cdd327680d3c0f7//lib" />
             </list>
           </value>
         </entry>
@@ -509,6 +509,7 @@
       </option>
     </properties>
     <CLASSES>
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/git/modelGeneratorsAnnotation-663476d8f30242b04773217f0cdd327680d3c0f7//lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/_fe_analyzer_shared-7.0.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/analyzer-0.39.17/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/args-1.6.0/lib" />
@@ -580,7 +581,6 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/web_socket_channel-1.1.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/webkit_inspection_protocol-0.7.3/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/yaml-2.2.1/lib" />
-      <root url="file://$PROJECT_DIR$/../annotations/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

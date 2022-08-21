@@ -1,15 +1,11 @@
 import 'package:build/build.dart';
+import 'package:generators/src/build_model_mapper.dart';
 import 'package:source_gen/source_gen.dart';
 
-import 'src/extension_generator.dart';
-import 'src/subclass_generator.dart';
-import 'src/class_generator.dart';
+import 'src/build_model_class.dart';
 
-Builder generateExtension(BuilderOptions options) =>
-    SharedPartBuilder([ExtensionGenerator()], 'extension_generator');
+Builder buildModelMapper(BuilderOptions options) =>
+    SharedPartBuilder([BuildModelMapper()], 'build_model_mapper');
 
-Builder generateSubclass(BuilderOptions options) =>
-    SharedPartBuilder([SubclassGenerator()], 'subclass_generator');
-
-Builder generateClass(BuilderOptions options) =>
-    SharedPartBuilder([ClassGenerator()], 'class_generator');
+Builder buildModelClass(BuilderOptions options) =>
+    SharedPartBuilder([BuildModelClass()], 'build_model_class');

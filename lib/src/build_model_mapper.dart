@@ -6,7 +6,7 @@ import 'package:source_gen/source_gen.dart';
 
 import 'model_visitor.dart';
 
-class ExtensionGenerator extends GeneratorForAnnotation<ExtensionAnnotation> {
+class BuildModelMapper extends GeneratorForAnnotation<ExtensionAnnotation> {
   @override
   String generateForAnnotatedElement(
       Element element, ConstantReader annotation, BuildStep buildStep) {
