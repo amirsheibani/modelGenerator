@@ -18,9 +18,11 @@ packages:
   annotations:
     dependency: "direct main"
     description:
-      path: "../annotations"
-      relative: true
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: "663476d8f30242b04773217f0cdd327680d3c0f7"
+      url: "https://github.com/amirsheibani/modelGeneratorsAnnotation.git"
+    source: git
     version: "1.0.0"
   args:
     dependency: transitive
