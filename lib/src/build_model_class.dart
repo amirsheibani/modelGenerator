@@ -7,7 +7,7 @@ import 'package:annotations/annotations.dart';
 
 import 'model_visitor.dart';
 
-class BuildModelClass extends GeneratorForAnnotation<ClassAnnotation> {
+class BuildModelClass extends GeneratorForAnnotation<GenerateModelClass> {
   @override
   String generateForAnnotatedElement(
       Element element, ConstantReader annotation, BuildStep buildStep) {

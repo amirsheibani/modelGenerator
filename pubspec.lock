@@ -20,10 +20,10 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "663476d8f30242b04773217f0cdd327680d3c0f7"
+      resolved-ref: "19a1ed004c06fca1740b8901582e9fef005f6f8b"
       url: "https://github.com/amirsheibani/modelGeneratorsAnnotation.git"
     source: git
-    version: "1.0.0"
+    version: "1.0.2"
   args:
     dependency: transitive
     description:
