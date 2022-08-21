@@ -1,0 +1,26 @@
+targets:
+  $default:
+    builders:
+      generators|annotations:
+        enabled: true
+
+builders:
+#  textBuilder:
+#    import: "package:generators/builder.dart"
+#    builder_factories: [ "generateClass" ]
+#    build_extensions: { ".dart": [".g.part"] }
+#    auto_apply: root_package
+#    build_to: cache
+#    applies_builders: ["source_gen|combining_builder"]
+
+
+  generators:
+    target: ":generators"
+    import: "package:generators/builder.dart"
+    builder_factories: ["generateClass","generateExtension"]
+    build_extensions: {".dart": [".model.part"]}
+    auto_apply: all_packages
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
+
+
