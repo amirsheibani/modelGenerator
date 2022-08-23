@@ -15,7 +15,7 @@
     },
     {
       "name": "annotations",
-      "rootUri": "../../annotations",
+      "rootUri": "file:///C:/Users/a.sheibani.ERNYKA/AppData/Local/Pub/Cache/git/modelGeneratorsAnnotation-b0e1638c41cddb7a7ddd95927a390ca5997c9160/",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -440,7 +440,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-08-21T13:35:59.231382Z",
+  "generated": "2022-08-23T08:01:29.158415Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

@@ -17,10 +17,10 @@ builders:
   generators:
     target: ":generators"
     import: "package:generators/builder.dart"
-    builder_factories: ["buildModelMapper","buildModelClass"]
+    builder_factories: ["buildMapper","buildModelClass"]
     build_extensions: {".dart": [".model.part"]}
-    auto_apply: all_packages
-    build_to: cache
+    auto_apply: root_package
+    build_to: source
     applies_builders: ["source_gen|combining_builder"]
 
 

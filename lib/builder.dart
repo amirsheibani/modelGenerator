@@ -4,8 +4,9 @@ import 'package:source_gen/source_gen.dart';
 
 import 'src/build_model_class.dart';
 
-Builder buildModelMapper(BuilderOptions options) =>
-    SharedPartBuilder([BuildModelMapper()], 'build_model_mapper');
+Builder buildMapper(BuilderOptions options) =>
+    LibraryBuilder(BuildMapper(), generatedExtension: '.mapper.g.dart');
+
 
 Builder buildModelClass(BuilderOptions options) =>
-    SharedPartBuilder([BuildModelClass()], 'build_model_class');
+    LibraryBuilder(BuildModelClass(), generatedExtension: '.model.g.dart');

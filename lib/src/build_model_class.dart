@@ -11,30 +11,34 @@ class BuildModelClass extends GeneratorForAnnotation<GenerateModelClass> {
   @override
   String generateForAnnotatedElement(
       Element element, ConstantReader annotation, BuildStep buildStep) {
+
+
+    String path = buildStep.inputId.path;
+    var name = annotation.peek('className')?.stringValue;
+
+
     final visitor = ModelVisitor();
     element.visitChildren(visitor);
 
-    final className ='${visitor.className.replaceAll('Entity','Model')}';
+    final className = (name is String) ? name : '${visitor.className.replaceAll('Entity','Model')}';
 
     final classBuffer = StringBuffer();
 
-    classBuffer.writeln('class $className extends ${visitor.className} {');
+    classBuffer.writeln('class $className {');
 
-    classBuffer.writeln('$className({');
     for (final field in visitor.fields.keys) {
       final type = '${visitor.fields[field]}';
-      classBuffer.writeln('$type $field ,');
+      classBuffer.writeln('final $type $field;');
     }
-    classBuffer.writeln('}) : super(');
+    classBuffer.writeln('$className({');
     for (final field in visitor.fields.keys) {
-      classBuffer.write('$field : $field,');
+      classBuffer.writeln('this.$field,');
     }
-    classBuffer.writeln(');');
+    classBuffer.writeln('});');
     classBuffer.writeln();
     generateFromJson(visitor,classBuffer);
     classBuffer.writeln();
     generateToJson(visitor,classBuffer);
-    classBuffer.writeln();
     classBuffer.writeln('}');
 
     return classBuffer.toString();
@@ -47,7 +51,8 @@ class BuildModelClass extends GeneratorForAnnotation<GenerateModelClass> {
     classBuffer.writeln(' {');
     classBuffer.writeln('  return $className(');
     for (final field in visitor.fields.keys) {
-      classBuffer.writeln("$field: json['$field'],");
+      final type = '${visitor.fields[field]}';
+      classBuffer.writeln("$field: json['$field'] as $type,");
     }
     classBuffer.writeln(');');
     classBuffer.writeln('}');
